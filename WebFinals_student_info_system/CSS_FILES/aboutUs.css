@@ -1,0 +1,121 @@
+/* GENERAL STYLING */
+body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background: #0b1220; /* Dark theme background */
+    color: #e6eef8; /* Light text */
+}
+
+main {
+    flex: 1;
+    min-height: calc(100vh - 80px); /* adjust according to header/footer */
+}
+
+
+/* ABOUT MEMBERS SECTION */
+.about-members-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;/* increased top padding */
+}
+
+
+.intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.intro h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+}
+
+.intro p {
+    color: #c0c0c0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+/* GRID OF MEMBERS */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 40px;
+    justify-items: center; /* center each card */
+    align-items: start; /* align top of cards */
+}
+
+
+.member-card {
+    text-align: center;
+    padding: 25px;
+    background: rgba(36, 37, 52, 0.85); /* slightly lighter dark */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(170, 95, 236, 0.5);
+}
+
+.member-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
+}
+
+.member-card img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(170, 95, 236, 0.3);
+}
+
+.member-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+
+.member-card p {
+    color: #aaa;
+    font-size: 1rem;
+    margin: 10px;
+
+}
+
+/* ANIMATION */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE GRID */
+@media (max-width: 1024px) {
+    .members-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .members-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

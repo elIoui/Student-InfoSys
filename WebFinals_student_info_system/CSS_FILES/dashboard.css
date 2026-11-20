@@ -1,0 +1,180 @@
+.main h3,
+.main p {
+    padding-left: 10px;
+}
+
+/* Updated Title Style */
+h2 {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 60px 0 20px 5px;
+}
+
+/* STAT CONTAINER */
+.statContainer {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+/* STAT BOX - Updated Design */
+.statBox {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 30px;
+    border-radius: 24px;
+    flex: 1 1 270px;
+    box-shadow: 0 8px 32px rgba(67, 65, 65, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* ICON STYLE */
+.statIcon .material-symbols-outlined {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    font-size: 30px;
+    padding: 15px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+/* TEXT INSIDE STAT BOX */
+.statInfo h4 {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    letter-spacing: 0.3px;
+}
+
+.statInfo p {
+    color: rgba(255,255,255,0.95);
+    font-size: 15px;
+    font-weight: 700;
+    padding-left: 0;
+}
+
+/* UPDATED GRADIENT BACKGROUNDS */
+.totalStud { 
+    background: linear-gradient(135deg, #2c2c54 0%, #1b1b2f 100%); /* deep dark purple/navy */ 
+    color: #e6eef8; /* subtle light text */
+}
+
+.newStud { 
+    background: linear-gradient(135deg, #3b3b98 0%, #1a1a2e 100%); /* muted indigo */ 
+    color: #e6eef8;
+}
+
+.irregStud { 
+    background: linear-gradient(135deg, #4a47a3 0%, #1b1b30 100%); /* deep violet */ 
+    color: #e6eef8;
+}
+
+.droppedStud { 
+    background: linear-gradient(135deg, #5b3c6f 0%, #1a1a2c 100%); /* dusky magenta/dark plum */ 
+    color: #e6eef8;
+}
+
+.transfereeStud { 
+    background: linear-gradient(135deg, #266b7e 0%, #1a1a2b 100%); /* dark teal/blue */ 
+    color: #e6eef8;
+}
+
+.gradStud { 
+    background: linear-gradient(135deg, #266b7e 0%, #1a1a2b 100%); /* dark teal/blue */ 
+    color: #e6eef8;
+}
+
+
+/* RECENT STUDENTS SECTION */
+.recentStudHeader p {
+    color: #b8b8b8;
+    font-weight: 300;
+    margin: 50px 0 10px 0;
+}
+
+/* RECENT STUDENTS LIST */
+.recentStudRow {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: nowrap;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+/* STUDENT CARD UPDATED DESIGN */
+.studCard {
+    background: rgba(26, 26, 30, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+.studCard:hover {
+    border-color: rgba(102, 126, 234, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 48px rgba(102, 126, 234, 0.2);
+}
+
+/* AVATAR DESIGN UPDATE */
+.studAvatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 3px solid rgba(102, 126, 234, 0.3);
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+    position: relative;
+}
+
+/* Avatar Image */
+.studAvatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* STUDENT INFORMATION */
+.studInfo {
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.studInfo h4 {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    letter-spacing: 0.3px;
+}
+
+.studInfo p {
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    padding-left: 0;
+}
+
+/* END OF MAIN CONTENT STYLE */

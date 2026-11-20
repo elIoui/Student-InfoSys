@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <!-- Google Icons and Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- External CSS Files -->
+    <link rel="stylesheet" href="../CSS_FILES/headerFooterNavMain.css">
+    <link rel="stylesheet" href="../CSS_FILES/dashboard.css">
+</head>
+
+
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="headerContent">
+            <img src="../MEDIAS/formifyLogo.png" alt="Logo" class="logo">
+            <span>Formify: Student Information System</span>
+        </div>
+    </header>
+
+      <!-- MAIN CONTAINER (Wrapper ng sidebar + main content) -->
+    <div class="container">
+
+        <!-- SIDEBAR (Left Navigation) -->
+        <nav class="sidebar">
+
+            <!-- TOP NAVIGATION LINKS -->
+            <div class="navTop">
+                <ul>
+                    <li><a href="dashboard.html" class="activeNav"><span class="icon">home</span> Dashboard</a></li>
+                    <li><a href="addStudent.html" class="active"><span class="icon">person_add</span> Add Student</a></li>
+                    <li><a href="viewStudents.php" class="activeNav"><span class="icon">groups</span> View Student</a></li>
+
+                    <li><a href="updateInfo.html"><span class="icon">edit</span> Update Info</a></li>
+                    <li><a href="settings.html"><span class="icon">settings</span> Settings</a></li>
+                </ul>
+            </div>
+
+            <!-- BOTTOM NAVIGATION LINKS -->
+            <div class="navBottom">
+                <ul>
+                    <hr>
+                    <li><a href="index.html"><span class="icon">logout</span> Log Out</a></li>
+                    <!-- Note: Sa backend kailangan dito ng JS confirmation bago mag-log out -->
+                </ul>
+            </div>
+
+        </nav>
+
+        <!-- MAIN CONTENT (Right Side Page Content) -->
+        <div class="main">
+            <h3>Dashboard</h3>
+            <p>Welcome to the Student Information System</p>
+
+            <!-- DASHBOARD CARDS -->
+            <div class="statContainer">
+
+                <!-- Total Students -->
+                <div class="statBox totalStud">
+                    <div class="statIcon">
+                        <span class="material-symbols-outlined">groups</span>
+                    </div>
+                    <div class="statInfo">
+                        <h4>Total Students</h4> <!--FIX NA TO-->
+                        <p>Number of totalStud</p> <!--need paltan here-->
+                    </div>
+                </div>
+
+                <!-- New Students -->
+                <div class="statBox newStud">
+                    <div class="statIcon">
+                        <span class="material-symbols-outlined">person_add</span>
+                    </div>
+                    <div class="statInfo">
+                        <h4>New Students</h4> <!--FIX NA TO-->
+                        <p>Number of newStud</p> <!--need paltan here-->
+                    </div>
+                </div>
+
+                <!-- Total Irreg Student -->
+                <div class="statBox irregStud">
+                    <div class="statIcon">
+                        <span class="material-symbols-outlined">rule</span>
+                    </div>
+                    <div class="statInfo">
+                        <h4>Irregular Student</h4> <!--FIX NA TO-->
+                        <p>Number of irregStud</p>  <!--need paltan here-->
+                    </div>
+                </div>
+
+                <!-- Dropped Students -->
+                <div class="statBox droppedStud">
+                    <div class="statIcon">
+                        <span class="material-symbols-outlined">person_remove</span>
+                    </div>
+                    <div class="statInfo">
+                        <h4>Dropped Students</h4> <!--FIX NA TO-->
+                        <p>Number of droppedStud</p> <!--need paltan here-->
+                    </div>
+                </div>
+
+                <!-- Tranferee Students -->
+                <div class="statBox transfereeStud">
+                    <div class="statIcon">
+                        <span class="material-symbols-outlined">sync_alt</span>
+                    </div>
+                    <div class="statInfo">
+                        <h4>Transferee Students</h4> <!--FIX NA TO-->
+                        <p>Number of transfereeStud</p> <!--need paltan here-->
+                    </div>
+                </div>
+
+                <!-- Graduated -->
+                <div class="statBox graduated">
+                    <div class="statIcon">
+                        <span class="material-symbols-outlined">school</span>
+                    </div>
+                    <div class="statInfo">
+                        <h4>Graduated</h4> <!--FIX NA TO-->
+                        <p>Number of gradStud</p> <!--need paltan here-->
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="recentStudHeader">
+                <h2>Recent Students</h2>
+            </div>
+
+            <div class="recentStudRow">
+                <div class="studCard">
+                    <div class="studAvatar">
+                        <img src="PHOTO OF STUDENT" alt="NAME OF THE STUDENT"> <!--need paltan here-->
+                    </div>
+                    <div class="studInfo">
+                        <h4>FIRST RECENTLY ADDED STUDENT NAME</h4>  <!--need paltan here-->
+                        <p>ID NUMBER HERE: &bullet; COURSE HERE: &bullet; YEAR HERE:</p> <!--PAPALTAN HERE-->
+                    </div>
+                </div>
+
+                <div class="studCard">
+                    <div class="studAvatar"> 
+                        <img src="PHOTO OF STUDENT" alt="NAME OF THE STUDENT">  <!--need paltan here-->
+                    </div>
+                    <div class="studInfo">
+                        <h4>SECOND RECENTLY ADDED STUDENT NAME</h4>  <!--need paltan here-->
+                        <p>ID NUMBER HERE: &bullet; COURSE HERE: &bullet; YEAR HERE:</p> <!--PAPALTAN HERE-->
+                    </div>
+                </div>
+
+                <div class="studCard">
+                    <div class="studAvatar"> 
+                        <img src="PHOTO OF STUDENT" alt="NAME OF THE STUDENT">  <!--need paltan here-->
+                    </div>
+                    <div class="studInfo">
+                        <h4>THIRD RECENTLY ADDED STUDENT NAME</h4>  <!--need paltan here-->
+                        <p>ID NUMBER HERE: &bullet; COURSE HERE: &bullet; YEAR HERE:</p> <!--PAPALTAN HERE-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        © 2025 Formify. All rights reserved. | SIS v1.0 | <a href="../HTML FILES/aboutUs.html">About Us</a>
+    </footer>
+
+    <script src="../JS FILES/activeNav.js"></script>
+    <script>
+            async function loadDashboard() {
+                try {
+                    const response = await fetch("../php/dashboardData.php");
+                    const data = await response.json();
+
+                    if (!data.success) return;
+
+                    // Total students
+                    document.querySelector('.totalStud .statInfo p').textContent = data.totalStudents;
+
+                    // Statuses
+                    document.querySelector('.irregStud .statInfo p').textContent = data.statuses['irregular'] || 0;
+                    document.querySelector('.droppedStud .statInfo p').textContent = data.statuses['dropped'] || 0;
+                    document.querySelector('.transfereeStud .statInfo p').textContent = data.statuses['transferee'] || 0;
+                    document.querySelector('.graduated .statInfo p').textContent = data.statuses['graduated'] || 0;
+
+                    // New students = last 7 days (optional: currently using last 3)
+                    document.querySelector('.newStud .statInfo p').textContent = data.recentStudents.length;
+
+                    // Update recent student cards
+                    const recentCards = document.querySelectorAll('.recentStudRow .studCard');
+                    data.recentStudents.forEach((student, index) => {
+                        if(recentCards[index]){
+                            recentCards[index].querySelector('img').src = "../uploads/" + student.photo;
+                            recentCards[index].querySelector('img').alt = student.name;
+                            recentCards[index].querySelector('h4').textContent = student.name;
+                            recentCards[index].querySelector('p').textContent = `ID: ${student.student_id} • ${student.course} • Year ${student.year_level}`;
+                        }
+                    });
+
+                } catch (error) {
+                    console.error("Error loading dashboard:", error);
+                }
+            }
+
+            window.addEventListener('DOMContentLoaded', loadDashboard);
+
+
+</script>
+
+
+</body>
+</html>

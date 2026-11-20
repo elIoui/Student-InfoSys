@@ -1,0 +1,100 @@
+/* SETTINGS MAIN CARD */
+.settingsBox {
+    margin-top: 40px;
+    flex-direction: column;
+}
+
+/* Form Inputs */
+.settingsBox form {
+    display: flex;
+    flex-direction: column; /*Vertical Layout*/
+    gap: 20px; /*Space between input fields*/
+}
+
+/* SETTINGS MAIN CARD */
+.settingsBox {
+    margin-top: 40px;
+    flex-direction: column;
+}
+
+/* Form Inputs */
+.settingsBox form {
+    display: flex;
+    flex-direction: column; /*Vertical Layout*/
+    gap: 25px; /*Space between input fields*/
+}
+
+.settingsBox .box {
+    display: flex;
+    padding: 16px 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(26, 26, 30, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-size: 15px;
+    color: #f0f0f0;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+}
+
+/*actual input field*/
+.settingsBox .box input {
+    flex: 1;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+
+/* placeholder */
+.settingsBox .box input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.settingsBox .box .icon {
+    margin-right: 10px;
+    font-size: 24px;
+    color: #667eea;
+}
+
+/* Save Button */
+.settingsBox .btnGrad {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    padding: 16px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.4s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 14px;
+    display: block;
+    border: none;
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+.btnGrad:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(102, 126, 234, 0.6);
+}
+
+.settingsBox .btnGrad:active {
+    transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .settingsBox .box {
+        padding: 14px 16px;
+    }
+
+    .settingsBox .btnGrad {
+        width: 100%;
+    }
+}

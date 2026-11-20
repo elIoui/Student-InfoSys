@@ -1,0 +1,213 @@
+* { 
+    font-family: "Inter", sans-serif;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h3{
+    font-size: 35px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+}
+
+p{
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 3px;
+}
+
+body {
+    background-color:  #0a0a0f;
+    background:  url('../MEDIAS/bg.gif') center center / cover no-repeat;
+     
+    background-attachment: fixed;
+    display: flex; 
+    flex-direction: column;
+    min-height: 100vh; /*makes footer sticks to  bottom*/
+}
+
+/* HEADER */
+header {
+    background: rgba(15, 15, 20, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;    /* vertical center */
+    height: 70px;           /* fixed header height */
+    padding: 0 30px;        /* left-right spacing */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* HEADER CONTENT */
+.headerContent {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* space between logo and text */
+}
+
+/* LOGO IMAGE */
+.logo {
+    max-height: 45px; /* ensures logo never makes header bigger */
+    width: auto;
+    object-fit: contain;
+    padding-left: 15px;
+    filter: brightness(1.2);
+    border-radius: 8px;
+}
+
+/* HEADER TITLE TEXT */
+.headerContent span {
+    background: linear-gradient(135deg, #fff 0%, #a0a0a0 100%);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ICONS FOR NAV */
+.icon {
+    font-family: 'Material Symbols Outlined';
+    font-size: 25px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+/* MAIN CONTAINER WITH SIDEBAR + Main Content */
+.container {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* SIDEBAR NAVIGATION */
+.sidebar {
+    background: rgba(20, 20, 25, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    width: 260px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navTop ul li,
+.navBottom ul li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    color: #b0b0b0;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 5px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.sidebar a:hover{
+    background: rgba(102, 126, 234, 0.15);
+    color: #ffffff;
+    transform: translateX(8px);
+    }
+
+.sidebar a.active{
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+    color: #fff;
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+}
+
+/*Horizontal line before log out*/
+.sidebar hr {
+    border: none;
+    border-top: 1px solid #2a2a2a;
+    margin: 10px 0;
+}
+
+/* MAIN CONTENT STYLE*/
+.main {
+    flex: 1;
+    padding: 40px 50px;
+    overflow-y: auto;
+    background: transparent;
+}
+
+/* FOOTER SECTION */
+.footer {
+    background: linear-gradient(27deg, #1a1a1a 15%, #1f1f1f 30%, #1c1c1c 48%, #212121 61%, #1e1e1e 77%, #1a1a1a 100%);
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.5);
+    letter-spacing: 3px;
+    word-spacing: 5px;
+    color: #b8b8b8;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #b8b8b8;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: #4a9eff;
+}
+/*END OF FOOTER SECTION STYLE*/
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header{
+        height: auto; 
+        flex-wrap: wrap; 
+    }
+    
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 15px;
+        border-right: none;
+        border-bottom: 2px solid #2a2a2a;
+    }
+
+    .sidebar a {
+        justify-content: center;
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .navBottom {
+        margin-top: 0;
+    }
+}

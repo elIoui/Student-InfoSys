@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Update Info</title>
+
+    <!-- Google Icons and Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- External CSS Files -->
+    <link rel="stylesheet" href="../CSS_FILES/headerFooterNavMain.css">
+    <link rel="stylesheet" href="../CSS_FILES/addStudentandUpdateInfo.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="headerContent">
+            <img src="../MEDIAS/formifyLogo.png" alt="Logo" class="logo">
+            <span>Formify: Student Information System</span>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <nav class="sidebar">
+            <div class="navTop">
+                <ul>
+                    <li><a href="dashboard.html"><span class="icon">home</span> Dashboard</a></li>
+                    <li><a href="addStudent.html"><span class="icon">person_add</span> Add Student</a></li>
+                    <li><a href="viewStudents.php" class="activeNav"><span class="icon">groups</span> View Student</a></li>
+                    <li><a href="updateInfo.html" class="activeNav"><span class="icon">edit</span> Update Info</a></li>
+                    <li><a href="settings.html"><span class="icon">settings</span> Settings</a></li>
+                </ul>
+            </div>
+
+            <div class="navBottom">
+                <ul>
+                    <hr>
+                    <li><a href="index.html"><span class="icon">logout</span> Log Out</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <div class="main">
+
+            <h3>Update Student</h3>
+            <p>Edit the information below and click "Update Student" to save changes.</p>
+
+            <!-- MAIN FORM CARD -->
+            <form class="formCard" id="updateStudentForm" 
+                  action="../php/updateStudent.php" method="POST" enctype="multipart/form-data">
+
+                <!-- HIDDEN FIELD FOR STUDENT ID -->
+                <input type="hidden" id="studentIDHidden" name="id">
+
+                <!-- ================= PERSONAL INFORMATION ================= -->
+                <div class="sectionCard">
+                    <h3 class="sectionTitle">Personal Information</h3>
+                    <div class="formGrid">
+
+                        <div class="inputGroup">
+                            <label for="studPhoto">Student Photo</label>
+                            <input type="file" id="studPhoto" name="studPhoto" accept="image/*">
+                        </div>
+
+                        <div class="inputGroup">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="Enter first name" required>
+                        </div>
+
+                        <div class="inputGroup">
+                            <label for="middleName">Middle Name</label>
+                            <input type="text" id="middleName" name="middleName" placeholder="Enter middle name" required>
+                        </div>
+
+                        <div class="inputGroup">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Enter last name" required>
+                        </div>
+
+                        <div class="inputGroup">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+
+                        <div class="inputGroup">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender" required>
+                                <option value="" disabled>Select gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ================= ACADEMIC INFORMATION ================= -->
+                <div class="sectionCard">
+                    <h3 class="sectionTitle">Academic Information</h3>
+                    <div class="formGrid">
+
+                        <div class="inputGroup">
+                            <label for="studentID">Student ID</label>
+                            <input type="text" id="studentID" name="studentID" placeholder="Enter student ID" required>
+                        </div>
+
+                        <div class="inputGroup">
+                            <label for="course">Course</label>
+                            <select id="course" name="course" required>
+                                <option value="" disabled>Select course</option>
+                                <optgroup label="Accountancy">
+                                    <option value="BSACC">Bachelor of Science in Accountancy</option>
+                                    <option value="BSAIS">Bachelor of Science in Accounting Information System</option>
+                                </optgroup>
+                                <optgroup label="Education">
+                                    <option value="BEE">Bachelor of Elementary Education</option>
+                                    <option value="BECE">Bachelor of Early Childhood Education</option>
+                                    <option value="BSEENG">Bachelor of Secondary Education (English)</option>
+                                    <option value="BSESCI">Bachelor of Secondary Education (Science)</option>
+                                    <option value="BSEMAT">Bachelor of Secondary Education (Mathematics)</option>
+                                    <option value="BSEFIL">Bachelor of Secondary Education (Filipino)</option>
+                                    <option value="BSESS">Bachelor of Secondary Education (Social Studies)</option>
+                                </optgroup>
+                                <optgroup label="Computer & IT">
+                                    <option value="BSCS">Bachelor of Science in Computer Science</option>
+                                    <option value="BSIT">Bachelor of Science in Information Technology</option>
+                                </optgroup>
+                                <optgroup label="Psychology">
+                                    <option value="BSPSYCH">Bachelor of Science in Psychology</option>
+                                </optgroup>
+                                <optgroup label="Social & Public Services">
+                                    <option value="BSPA">Bachelor of Science in Public Administration</option>
+                                    <option value="BSSW">Bachelor of Science in Social Work</option>
+                                </optgroup>
+                                <optgroup label="Other Programs">
+                                    <option value="BACOMM">Bachelor of Arts in Communication</option>
+                                    <option value="BSENTREP">Bachelor of Science in Entrepreneurship</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="inputGroup">
+                            <label for="yearLevel">Year Level</label>
+                            <select id="yearLevel" name="yearLevel" required>
+                                <option value="" disabled>Select year level</option>
+                                <option value="1st">1st Year</option>
+                                <option value="2nd">2nd Year</option>
+                                <option value="3rd">3rd Year</option>
+                                <option value="4th">4th Year</option>
+                            </select>
+                        </div>
+
+                        <div class="inputGroup">
+                            <label for="section">Section</label>
+                            <input type="text" id="section" name="section" placeholder="Enter section" required>
+                        </div>
+
+                        <div class="inputGroup">
+                            <label for="studentStatus">Student Status</label>
+                            <select id="studentStatus" name="studentStatus" required>
+                                <option value="" disabled>Select Student Status</option>
+                                <option value="regular">Regular</option>
+                                <option value="transferee">Transferee</option>
+                                <option value="irregular">Irregular</option>
+                                <option value="dropped">Dropped</option>
+                                <option value="graduated">Graduated</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ================= CONTACT INFORMATION ================= -->
+                <div class="sectionCard">
+                    <h3 class="sectionTitle">Contact Information</h3>
+                    <div class="formGrid">
+
+                        <div class="inputGroup">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter phone number" required>
+                        </div>
+
+                        <div class="inputGroup">
+                            <label for="personalEmail">Personal Email Address</label>
+                            <input type="email" id="personalEmail" name="personalEmail" placeholder="Enter personal email" required>
+                        </div>
+
+                        <div class="inputGroup">
+                            <label for="schoolEmail">School Email Address</label>
+                            <input type="email" id="schoolEmail" name="schoolEmail" placeholder="Enter school email" required>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ================= FORM BUTTONS ================= -->
+                <div class="btnGroup">
+                    <button type="submit" id="updateStud" class="btnSubmit">UPDATE STUDENT</button>
+                    <button type="reset" id="clearInput" class="btnReset">CLEAR ALL</button>
+                </div>
+
+            </form>
+
+        </div> <!-- end of .main -->
+
+    </div> <!-- end of .container -->
+
+    <footer class="footer">
+        © 2025 Formify. All rights reserved. | SIS v1.0 | <a href="../HTML FILES/aboutUs.html">About Us</a>
+    </footer>
+
+    <script src="../JS FILES/activeNav.js"></script>
+ <script>
+    // Prefill form with student info and handle photo preview
+    window.onload = function () {
+        const url = new URLSearchParams(window.location.search);
+        const id = url.get("id");
+
+        if (!id) {
+            alert("No student selected.");
+            return;
+        }
+
+        const photoInput = document.getElementById("studPhoto");
+        const photoPreviewContainer = document.createElement("div");
+        photoPreviewContainer.style.marginTop = "10px";
+        const photoPreview = document.createElement("img");
+        photoPreview.style.width = "120px";
+        photoPreview.style.height = "120px";
+        photoPreview.style.objectFit = "cover";
+        photoPreview.style.borderRadius = "8px";
+        photoPreviewContainer.appendChild(photoPreview);
+        photoInput.parentNode.appendChild(photoPreviewContainer);
+
+        fetch("../php/getStudent.php?id=" + id)
+            .then(res => res.json())
+            .then(data => {
+                if (!data.success) {
+                    alert("Student data not found.");
+                    return;
+                }
+
+                document.getElementById("studentIDHidden").value = data.id;
+
+                document.getElementById("firstName").value = data.first_name;
+                document.getElementById("middleName").value = data.middle_name;
+                document.getElementById("lastName").value = data.last_name;
+
+                document.getElementById("dob").value = data.dob;
+                document.getElementById("gender").value = data.gender;
+
+                document.getElementById("studentID").value = data.student_id;
+                document.getElementById("course").value = data.course;
+                document.getElementById("yearLevel").value = data.year_level;
+                document.getElementById("section").value = data.section;
+                document.getElementById("studentStatus").value = data.student_status;
+
+                document.getElementById("phoneNumber").value = data.phone_number;
+                document.getElementById("personalEmail").value = data.personal_email;
+                document.getElementById("schoolEmail").value = data.school_email;
+
+                // Set current photo
+                if (data.photo) {
+                    photoPreview.src = "../uploads/" + data.photo;
+                    photoPreview.alt = data.first_name + " " + data.last_name;
+                }
+            });
+
+        // Preview new photo when selected
+        photoInput.addEventListener("change", function () {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    photoPreview.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    };
+</script>
+
+
+</body>
+</html>

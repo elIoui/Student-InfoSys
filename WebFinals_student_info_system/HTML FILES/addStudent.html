@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Student</title>
+
+    <!-- Google Icons and Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- External CSS Files -->
+    <link rel="stylesheet" href="../CSS_FILES/headerFooterNavMain.css">
+    <link rel="stylesheet" href="../CSS_FILES/addStudentandUpdateInfo.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="headerContent">
+            <img src="../MEDIAS/formifyLogo.png" alt="Logo" class="logo">
+            <span>Formify: Student Information System</span>
+        </div>
+    </header>
+
+      <!-- MAIN CONTAINER (Wrapper ng sidebar + main content) -->
+    <div class="container">
+
+        <!-- SIDEBAR (Left Navigation) -->
+        <nav class="sidebar">
+
+            <!-- TOP NAVIGATION LINKS -->
+            <div class="navTop">
+                <ul>
+                    <li><a href="dashboard.html"><span class="icon">home</span> Dashboard</a></li>
+                    <li><a href="addStudent.html" class="activeNav"><span class="icon">person_add</span> Add Student</a></li>
+                    <li><a href="viewStudents.php" class="activeNav"><span class="icon">groups</span> View Student</a></li>
+
+                    <li><a href="updateInfo.html"><span class="icon">edit</span> Update Info</a></li>
+                    <li><a href="settings.html"><span class="icon">settings</span> Settings</a></li>
+                </ul>
+            </div>
+
+            <!-- BOTTOM NAVIGATION LINKS -->
+            <div class="navBottom">
+                <ul>
+                    <hr>
+                    <li><a href="index.html"><span class="icon">logout</span> Log Out</a></li>
+                    <!-- Note: Sa backend kailangan dito ng JS confirmation bago mag-log out -->
+                </ul>
+            </div>
+
+        </nav>
+
+        <!-- MAIN CONTENT (Right Side Page Content) -->
+        <div class="main">
+
+            <h3>Add Student</h3>
+            <p>Complete the form below to register a new student. Make sure all information is accurate before submission.</p>
+
+            <!-- MAIN FORM CARD -->
+            <!-- The whole form para sa pag-register ng student -->
+           <form class="formCard" id="addStudentForm" action="../PHP/addStudentProcess.php" method="POST" enctype="multipart/form-data">
+
+
+                <!-- ================= PERSONAL INFORMATION ================= -->
+                <div class="sectionCard">
+                    <h3 class="sectionTitle">Personal Information</h3>
+
+                    <div class="formGrid">
+
+                        <!-- Upload Image ng Student -->
+                        <div class="inputGroup">
+                            <label for="studPhoto">Student Photo</label>
+                            <input type="file" id="studPhoto" name="studPhoto" accept="image/*" required>
+                        </div>
+
+                        <!-- First Name -->
+                        <div class="inputGroup">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="Enter first name" required>
+                        </div>
+
+                        <!-- Middle Name -->
+                        <div class="inputGroup">
+                            <label for="middleName">Middle Name</label>
+                            <input type="text" id="middleName" name="middleName" placeholder="Enter middle name" required>
+                        </div>
+
+                        <!-- Last Name -->
+                        <div class="inputGroup">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Enter last name" required>
+                        </div>
+
+                        <!-- Date of Birth -->
+                        <div class="inputGroup">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+
+                        <!-- Gender -->
+                        <div class="inputGroup">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender" required>
+                                <option value="" disabled selected>Select gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ================= ACADEMIC INFORMATION ================= -->
+                <div class="sectionCard">
+                    <h3 class="sectionTitle">Academic Information</h3>
+
+                    <div class="formGrid">
+
+                        <!-- Student ID -->
+                        <div class="inputGroup">
+                            <label for="studentID">Student ID</label>
+                            <input type="text" id="studentID" name="studentID" placeholder="Enter student ID" required>
+                        </div>
+
+                        <!-- Course -->
+                        <div class="inputGroup">
+                            <label for="course">Course</label>
+                            <select id="course" name="course" required>
+                                <option value="" disabled selected>Select course</option>
+
+                                <!-- Grouped by department para more organized -->
+                                <optgroup label="Accountancy">
+                                    <option value="BSACC">Bachelor of Science in Accountancy</option>
+                                    <option value="BSAIS">Bachelor of Science in Accounting Information System</option>
+                                </optgroup>
+
+                                <optgroup label="Education">
+                                    <option value="BEE">Bachelor of Elementary Education</option>
+                                    <option value="BECE">Bachelor of Early Childhood Education</option>
+                                    <option value="BSEENG">Bachelor of Secondary Education (English)</option>
+                                    <option value="BSESCI">Bachelor of Secondary Education (Science)</option>
+                                    <option value="BSEMAT">Bachelor of Secondary Education (Mathematics)</option>
+                                    <option value="BSEFIL">Bachelor of Secondary Education (Filipino)</option>
+                                    <option value="BSESS">Bachelor of Secondary Education (Social Studies)</option>
+                                </optgroup>
+
+                                <optgroup label="Computer & IT">
+                                    <option value="BSCS">Bachelor of Science in Computer Science</option>
+                                    <option value="BSIT">Bachelor of Science in Information Technology</option>
+                                </optgroup>
+
+                                <optgroup label="Psychology">
+                                    <option value="BSPSYCH">Bachelor of Science in Psychology</option>
+                                </optgroup>
+
+                                <optgroup label="Social & Public Services">
+                                    <option value="BSPA">Bachelor of Science in Public Administration</option>
+                                    <option value="BSSW">Bachelor of Science in Social Work</option>
+                                </optgroup>
+
+                                <optgroup label="Other Programs">
+                                    <option value="BACOMM">Bachelor of Arts in Communication</option>
+                                    <option value="BSENTREP">Bachelor of Science in Entrepreneurship</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <!-- Year Level -->
+                        <div class="inputGroup">
+                            <label for="yearLevel">Year Level</label>
+                            <select id="yearLevel" name="yearLevel" required>
+                                <option value="" disabled selected>Select year level</option>
+                                <option value="1st">1st Year</option>
+                                <option value="2nd">2nd Year</option>
+                                <option value="3rd">3rd Year</option>
+                                <option value="4th">4th Year</option>
+                            </select>
+                        </div>
+
+                        <!-- Section -->
+                        <div class="inputGroup">
+                            <label for="section">Section</label>
+                            <input type="text" id="section" name="section" placeholder="Enter section" required>
+                        </div>
+
+                        <!-- Student Status -->
+                        <div class="inputGroup">
+                            <label for="studentStatus">Student Status</label>
+                            <select id="studentStatus" name="studentStatus" required>
+                                <option value="" disabled selected>Select Student Status</option>
+                                <option value="regular">Regular</option>
+                                <option value="transferee">Transferee</option>
+                                <option value="irregular">Irregular</option>
+                                <option value="dropped">Dropped</option>
+                                <option value="graduated">Graduated</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ================= CONTACT INFORMATION ================= -->
+                <div class="sectionCard">
+                    <h3 class="sectionTitle">Contact Information</h3>
+
+                    <div class="formGrid">
+
+                        <div class="inputGroup">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter phone number" required>
+                        </div>
+
+                        <div class="inputGroup">
+                            <label for="personalEmail">Personal Email Address</label>
+                            <input type="email" id="personalEmail" name="personalEmail" placeholder="Enter personal email" required>
+                        </div>
+
+                        <div class="inputGroup">
+                            <label for="schoolEmail">School Email Address</label>
+                            <input type="email" id="schoolEmail" name="schoolEmail" placeholder="Enter school email" required>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ================= FORM BUTTONS ================= -->
+                <!-- Submit = add student; Reset = clear all inputs -->
+                <div class="btnGroup">
+                    <button type="submit" id="addStud" class="btnSubmit">ADD STUDENT</button>
+                    <button type="reset" id="clearInput" class="btnReset">CLEAR ALL</button>
+                </div>
+
+            </form>
+
+        </div> <!-- end of .main -->
+
+    </div> <!-- end of .container -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        © 2025 Formify. All rights reserved. | SIS v1.0 | <a href="../HTML FILES/aboutUs.html">About Us</a>
+    </footer>
+
+    <script src="../JS FILES/activeNav.js"></script>
+
+</body>
+</html>

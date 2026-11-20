@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Info System</title>
+
+    <!-- Google Fonts & Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: url('../MEDIAS/bg.gif') center center / cover no-repeat;
+            background-color: #1a1a1e;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Floating Elements */
+        .float-text {
+            position: absolute;
+            color: rgba(255,255,255,0.12);
+            font-size: 1.4rem;
+            animation: float 8s infinite ease-in-out;
+            user-select: none;
+        }
+
+        /* Headings with purple-blue gradient */
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            letter-spacing: 2px;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            background-clip: text; 
+            color: transparent;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 300;
+            margin-bottom: 10px;
+            opacity: 0.85;
+            color: #dcd8ff;
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+            margin: 20px;
+        }
+
+        p {
+            font-size: 1.4rem;
+            max-width: 500px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin: 20px;
+            color: #e7e7f7;
+        }
+
+        /* Matched Gradient Button */
+        .loginBtn {
+            padding: 14px 34px;
+            background-image: linear-gradient(to right, #667eea 0%, #764ba2 51%, #f093fb 100%);
+            background-size: 200% auto;
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: 0.4s ease;
+            font-size: 1.1rem;
+            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+        }
+
+        .loginBtn:hover {
+            background-position: right center;
+            box-shadow: 0 12px 35px rgba(118, 75, 162, 0.45);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 480px) {
+            p {
+                font-size: 1.2rem;
+                font-style: italic;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Floating decorative elements -->
+    <!--<div class="float-text" style="top: 10%; left: 8%;">12 + 5</div>
+    <div class="float-text" style="top: 20%; right: 10%;">3 × 4</div>
+    <div class="float-text" style="bottom: 15%; left: 12%;">24</div>
+    <div class="float-text" style="bottom: 22%; right: 18%;">7 − 2</div> -->
+
+    <h1>Welcome To Formify</h1>
+    <h2>Manage. Organize. Access.</h2>
+
+    <img src="../MEDIAS/formifyLogo.png" alt="Logo">
+
+    <p>Your centralized platform for smooth and efficient student data management.</p>
+
+    <a href="login.html" class="loginBtn">LOG IN</a>
+</body>
+</html>

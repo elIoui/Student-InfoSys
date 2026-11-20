@@ -1,0 +1,105 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('bg.gif') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Signup container */
+.signup-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 40px 35px;
+    width: 340px;
+    text-align: center;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #111;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Input box design */
+.box {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    font-family: 'Material Symbols Outlined';
+    color: #444;
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.box input {
+    background: transparent;
+    color: #333;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    flex: 1;
+}
+
+/* Gradient login button, from cssgradient */
+.btn-grad {
+    background-image: linear-gradient(to right, #000000 0%, #434343 51%, #000000 100%);
+    margin: 10px auto;
+    padding: 10px 0;
+    width: 40%;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border: none;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 50px;
+    display: block;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+    transform: scale(1.05);
+}        
+
+/* Text link */
+p {
+    color: #111;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+a {
+    color: #111;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: rgb(117, 113, 113);
+    text-decoration: underline;
+}
+
+/* Responsive layout */
+@media (max-width: 400px) {
+    .signup-box {
+        width: 90%;
+        padding: 25px;
+    }
+}
